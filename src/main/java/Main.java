@@ -6,12 +6,10 @@ public class Main {
                 "которое рассчитывает победителя гонки зная скорость." +
                 "\nРасчет происходит по 3 автомобилям.");
         Track arrival = new Track();
-        Cars firstCar = new Cars(inputName(1), inputSpeed(1));
-        arrival.setWiner(firstCar);
-        Cars secondCar = new Cars(inputName(2), inputSpeed(2));
-        arrival.setWiner(secondCar);
-        Cars thirdCar = new Cars(inputName(3), inputSpeed(3));
-        arrival.setWiner(thirdCar);
+        for(int i = 1; i < 4; i++){
+            Cars firstCar = new Cars(inputName(i), inputSpeed(i));
+            arrival.setWiner(firstCar);
+        }
 
         System.out.println("Победитель: " + arrival.getWiner());
     }
